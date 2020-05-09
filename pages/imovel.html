@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../assets/bootstrap4.4.1/css/bootstrap.min.css">
+    <title>Imóvel</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-dark pt-0 pb-0">
+            <div class="navbar-brand">
+                <a href="http://localhost:3000/">
+                    <img src="../assets/images/logoDespachaImob modificado.png" alt="Logo DespachaImob">
+                </a>
+            </div>
+            <ul class="nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Cadastro</a>
+                    <div class="dropdown-menu">
+                        <a href="/pages/comprador.html" class="dropdown-item">Comprador</a>
+                        <a href="/pages/parceiro.html" class="dropdown-item">Parceiro</a>
+                        <a href="/pages/processo.html" class="dropdown-item">Processo</a>
+                        <a href="/pages/procurador.html" class="dropdown-item">Procurador</a>
+                        <a href="/pages/vendedor.html" class="dropdown-item">Vendedor</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="certidoes.html">Certidoes</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Formulários</a>
+                    <div class="dropdown-menu">
+                        <a href="declaracao" class="dropdown-item">Declaração</a>
+                        <a href="espelho" class="dropdown-item">Espelho</a>
+                        <a href="itbi" class="dropdown-item">ITBI</a>
+                        <a href="procuracao" class="dropdown-item">Procuração</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="pesquisa.htlm">Pesquisa</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1 class="text-center">Imóvel</h1>
+        <div class="container">
+            <form>
+                <div class="row">
+                    <div class="form-group col-md-2">
+                        <label for="cep" class="mb-0 col-form-label-sm">CEP</label>
+                        <input type="text" name="cep" id="cep" class="form-control">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="tipo" class="mb-0 col-form-label-sm">Tipo</label>
+                        <select name="tipo" id="tipo" class="form-control">
+                            <option value=""></option>
+                            <option value = "Aeroporto">Aeroporto</option>
+                            <option value = "Alameda">Alameda</option>
+                            <option value = "&Aacute;rea">&Aacute;rea</option>
+                            <option value = "Avenida">Avenida</option>
+                            <option value = "Campo">Campo</option>
+                            <option value = "Ch&aacute;cara">Ch&aacute;cara</option>
+                            <option value = "Col&ocirc;nia">Col&ocirc;nia</option>
+                            <option value = "Condom&iacute;nio">Condom&iacute;nio</option>
+                            <option value = "Conjunto">Conjunto</option>
+                            <option value = "Distrito">Distrito</option>
+                            <option value = "Esplanada">Esplanada</option>
+                            <option value = "Esta&ccedil;&atilde;o">Esta&ccedil;&atilde;o</option>
+                            <option value = "Estrada">Estrada</option>
+                            <option value = "Favela">Favela</option>
+                            <option value = "Fazenda">Fazenda</option>
+                            <option value = "Feira">Feira</option>
+                            <option value = "Jardim">Jardim</option>
+                            <option value = "Ladeira">Ladeira</option>
+                            <option value = "Lago">Lago</option>
+                            <option value = "Lagoa">Lagoa</option>
+                            <option value = "Largo">Largo</option>
+                            <option value = "Loteamento">Loteamento</option>
+                            <option value = "Morro">Morro</option>
+                            <option value = "N&uacute;cleo">N&uacute;cleo</option>
+                            <option value = "Parque">Parque</option>
+                            <option value = "Passarela">Passarela</option>
+                            <option value = "P&aacute;tio">P&aacute;tio</option>
+                            <option value = "Pra&ccedil;a">Pra&ccedil;a</option>
+                            <option value = "Quadra">Quadra</option>
+                            <option value = "Recanto">Recanto</option>
+                            <option value = "Residencial">Residencial</option>
+                            <option value = "Rodovia">Rodovia</option>
+                            <option value = "Rua">Rua</option>
+                            <option value = "Setor">Setor</option>
+                            <option value = "S&iacute;tio">S&iacute;tio</option>
+                            <option value = "Travessa">Travessa</option>
+                            <option value = "Trecho">Trecho</option>
+                            <option value = "Trevo">Trevo</option>
+                            <option value = "Vale">Vale</option>
+                            <option value = "Vereda">Vereda</option>
+                            <option value = "Via">Via</option>
+                            <option value = "Viaduto">Viaduto</option>
+                            <option value = "Viela">Viela</option>
+                            <option value = "Vila">Vila</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="logradouro" class="mb-0 col-form-label-sm">Logradouro</label>
+                        <input type="text" name="logradouro" id="logradouro" class="form-control">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="numero" class="mb-0 col-form-label-sm">Número</label>
+                        <input type="text" name="numero" id="numero" class="form-control">
+                    </div>
+                </div><!-- Row 2 -->
+
+                <div class="row">
+                    <div class="form-group col-md-4">
+                        <label for="complemento" class="mb-0 col-form-label-sm">Complemento</label>
+                        <input type="text" name="complemento" id="complemento" class="form-control">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="bairro" class="mb-0 col-form-label-sm">Bairro</label>
+                        <input type="text" name="bairro" id="bairro" class="form-control">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="cidade" class="mb-0 col-form-label-sm">Cidade</label>
+                        <input type="text" name="cidade" id="cidade" class="form-control">
+                    </div>
+                    
+                </div><!-- Row 3 -->
+
+                <div class="row">
+                    <div class="form-group col-md-2">
+                        <label for="uf" class="mb-0 col-form-label-sm">UF</label>
+                        <select name="uf" id="uf" class="form-control custon-select">
+                            <option value=""></option>
+	                        <option value="AC">AC</option>
+                            <option value="AL">AL</option>	
+                            <option value="AM">AM</option>
+                            <option value="AP">AP</option>
+                            <option value="BA">BA</option>
+                            <option value="CE">CE</option>
+                            <option value="DF">DF</option>
+                            <option value="ES">ES</option>
+                            <option value="GO">GO</option>
+                            <option value="MA">MA</option>
+                            <option value="MG">MG</option>
+                            <option value="MS">MS</option>
+                            <option value="MT">MT</option>
+                            <option value="PA">PA</option>
+                            <option value="PB">PB</option>	
+                            <option value="PE">PE</option>
+                            <option value="PI">PI</option>	
+                            <option value="PR">PR</option>	
+                            <option value="RJ">RJ</option>
+                            <option value="RN">RN</option>
+                            <option value="RO">RO</option>
+                            <option value="RR">RR</option>
+                            <option value="RS">RS</option>	
+                            <option value="SC">SC</option>	
+                            <option value="SE">SE</option>	
+                            <option value="SP">SP</option>
+                            <option value="TO">TO</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="iptu" class="mb-0 col-form-label-sm">IPTU</label>
+                        <input type="text" name="iptu" id="iptu" class="form-control">
+                    </div>
+                    <div class="form-group col-md-5">
+                        <label for="cartorio" class="mb-0 col-form-label-sm">Cartório</label>
+                        <input type="text" name="cartorio" id="cartorio" class="form-control">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="matricula" class="mb-0 col-form-label-sm">Matrícula</label>
+                        <input type="text" name="matricula" id="matricula" class="form-control">
+                    </div>
+                </div><!-- Row 4 -->
+
+                <div class="row">
+                    <div class="form-group col-md-3">
+                        <label for="valor" class="mb-0 col-form-label-sm">Valor de Venda</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <label class="input-group-text" for="valor">R$</label>
+                            </div>
+                            <input type="text" name="valor" id="valor" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="v_condominio" class="mb-0 col-form-label-sm">Valor Condomínio</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <label class="input-group-text" for="v_condominio">R$</label>
+                            </div>
+                            <input type="text" name="v_condominio" id="v_condominio" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="suites" class="mb-0 col-form-label-sm">Suítes</label>
+                        <input type="text" name="suites" id="suites" class="form-control">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="banheiros" class="mb-0 col-form-label-sm">Banho</label>
+                        <input type="text" name="banheiros" id="banheiros" class="form-control">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="dce" class="mb-0 col-form-label-sm">DCE</label>
+                        <input type="text" name="dce" id="dce" class="form-control">
+                    </div>                    
+                </div><!-- Row 5 -->
+
+                <div class="row">
+                    <div class="form-group col-md-2">
+                        <label for="varanda" class="mb-0 col-form-label-sm">Varanda</label>
+                        <input type="text" name="varanda" id="varanda" class="form-control">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="vazio" class="mb-0 col-form-label-sm">Vazio</label>
+                        <select name="vazio" id="vazio" class="form-control">
+                            <option value="Sim">Sim</option>
+                            <option value="N&atilde;o">N&atilde;o</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for=""> </label>
+                        <div class="form-check">
+                            <input type="radio" disabled name="opcao_vazio" id="inquilino" class="form-check-input" value="Inquilino">
+                            <label for="inquilino" class="form-check-label">Inquilino</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" disabled name="opcao_vazio" id="proprietario" class="form-check-input" value="Proprietario">
+                            <label for="proprietario" class="form-check-label">Proprietário</label>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="garagem" class="mb-0 col-form-label-sm">Garagem</label>
+                        <input type="text" name="garagem" id="garagem" class="form-control">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="elevador" class="mb-0 col-form-label-sm">Elevador</label>
+                        <input type="text" name="elevador" id="elevador" class="form-control">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="ap_andar" class="mb-0 col-form-label-sm">Apto. Andar</label>
+                        <input type="text" name="ap_andar" id="ap_andar" class="form-control">
+                    </div>
+                </div><!-- Row 6 -->
+
+                <div class="row">
+                    <div class="form-group col-md-2">
+                        <label for="andares" class="mb-0 col-form-label-sm">Andares</label>
+                        <input type="text" name="andares" id="andares" class="form-control">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="area" class="mb-0 col-form-label-sm">Área</label>
+                        <input type="text" name="area" id="area" class="form-control">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="apto_posicao" class="mb-0 col-form-label-sm">Posicão Apto</label>
+                        <input type="text" name="apto_posicao" id="apto_posicao" class="form-control">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="sol_posicao" class="mb-0 col-form-label-sm">Psição Sol</label>
+                        <input type="text" name="sol_posicao" id="sol_posicao" class="form-control">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="p_referencia" class="mb-0 col-form-label-sm">Ponto de referência</label>
+                        <input type="text" name="p_referencia" id="p_referencia" class="form-control">
+                    </div>
+                </div><!-- Row 7 -->
+                <div class="row">
+                    <div class="form-group col-md-4">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="ventilador" value="ventilador_teto">
+                            <label for="ventilador" class="form-check-label">Ventilador teto</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" id="ar_condicionado" class="form-check-input" value="ar_condicionado">
+                            <label for="ar_condicionado" class="form-check-label">Ar condicionado</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" name="" id="arm_banheiro" class="form-check-input" value="armario_banheiro">
+                            <label for="arm_banheiro" class="form-check-label">Armário banheiro</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" name="" id="arm_cozinha" class="form-check-input" value="armario_cozinha">
+                            <label for="arm_cozinha" class="form-check-label">Armário cozinha</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" name="" id="arm_quarto" class="form-check-input" value="armario_quarto">
+                            <label for="arm_quarto" class="form-check-label">Armário quarto</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" name="" id="granito" class="form-check-input" value="fachada_granito">
+                            <label for="granito" class="form-check-label">Fachada granito</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="blindex" value="fachada_blindex">
+                            <label for="blindex" class="form-check-label">Fachada blindex</label>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <div class="form-check">
+                            <input type="checkbox" id="pintura" class="form-check-input" value="fachada_pintura">
+                            <label for="pintura" class="form-check-label">Fachaca pintura</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" name="" id="portao" class="form-check-input" value="seguranca_portao">
+                            <label for="portao" class="form-check-label">Segurança Portão</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" name="" id="gas" class="form-check-input" value="gas">
+                            <label for="gas" class="form-check-label">Gás</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" name="" id="tv" class="form-check-input" value="circuito_tv">
+                            <label for="tv" class="form-check-label">Circúito de TV</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" name="portaria" id="portaria" class="form-check-input" value="portaria">
+                            <label for="portaria" class="form-check-label">Portaria 24h</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" name="interfone" id="interfone" class="form-check-input" value="interfone">
+                            <label for="interfone" class="form-check-label">Interfone</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" name="ginastica" id="ginastica" class="form-check-input" value="ginastica">
+                            <label for="ginastica" class="form-check-label">Salão de ginática</label>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <div class="form-check">
+                            <input type="checkbox" name="quadra" id="quadra" class="form-check-input" value="quadra">
+                            <label for="quadra" class="form-check-label">Quadra esportiva</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" name="festas" id="festas" class="form-check-input" value="festas">
+                            <label for="festas" class="form-check-label">Salão de festas</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" name="jogos" id="jogos" class="form-check-input" value="jogos">
+                            <label for="jogos" class="form-check-label">Salão de jogos</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" name="churrasqueira" id="churrasqueira" class="form-check-input" value="churrasqueira">
+                            <label for="churrasqueira" class="form-check-label">Churrasqueira</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" name="playground" id="playground" class="form-check-input" value="playground">
+                            <label for="playground" class="form-check-label">Playground</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" name="piscina" id="piscina" class="form-check-input" value="piscina">
+                            <label for="piscina" class="form-check-label">Piscina</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" name="sauna" id="sauna" class="form-check-input" value="sauna">
+                            <label for="sauna" class="form-check-label">Sauna</label>
+                        </div>
+                    </div>
+                </div><!-- Row 8 -->
+                <div class="row">
+                    <div class="form-group col-md-4">
+                        <label for="sindico" class="mb-0 col-form-label-sm">Sídico</label>
+                        <input type="text" name="sindico" id="sindico" class="form-control">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="s_telefone" class="mb-0 col-form-label-sm">Telefones</label>
+                        <input type="text" name="s_telefone" id="s_telefone" class="form-control">
+                    </div>
+                    <div class="form-group col-md-5">
+                        <label for="email" class="mb-0 col-form-label-sm">E-mail</label>
+                        <input type="text" name="email" id="email" class="form-control">
+                    </div>
+                </div><!-- Row 9 -->
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <label for="observacao" class="mb-0 col-form-label-sm">Observações</label>
+                        <textarea class="form-control" name="observacao" id="observacao" rows="4" cols="33"></textarea>
+                    </div>
+                </div><!-- Row 10 -->
+            </form>
+        </>
+    </main>
+    
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/bootstrap4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/actions.js"></script>
+</body>
+</html>
