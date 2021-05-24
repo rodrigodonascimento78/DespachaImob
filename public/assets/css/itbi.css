@@ -1,0 +1,32 @@
+@page {
+  margin: 0.5cm 0.5cm 0.5cm 1.5cm;
+}
+
+.logo_prefeitura, .dados_cliente {
+  width: 100%;
+}
+
+table, td {
+  width: 100%;
+  border: 2px solid black;
+}
+
+.labels {
+  font-size: 5pt;
+  font-weight: bold;
+  margin-left: 3px;
+  border: none;
+}
+
+.nome {
+  border: none;
+}
+
+.check {
+  border: none;
+  font-size: 5pt;
+}
+
+.complemento {
+  margin-left: 250px;
+}

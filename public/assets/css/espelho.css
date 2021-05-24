@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: ubuntu;
+}
+
+@font-face {
+  font-family: ubuntu;
+  src: url("../css/fonts/Ubuntu-Regular.ttf");
+}
+@font-face {
+  font-family: ubuntu_italic;
+  src: url("../css/fonts/Ubuntu-Italic.ttf");
+}
+@font-face {
+  font-family: ubuntu_bold;
+  src: url("../css/fonts/Ubuntu-Bold.ttf");
+}
+@font-face {
+  font-family: ubuntu_medium;
+  src: url("../css/fonts/Ubuntu-Medium.ttf");
+}
+@font-face {
+  font-family:'Eras Bold ITC';
+  src: url('assets/css/fonts/ERASBD.TTF');
+}
+
+/* ESPELHO */
+.inicio_processo {
+  margin-left: 660px;
+  margin-right: 0;
+  font-size: 10px;
+}
+
+.cabecalho_espelho {
+  font-size: 14px;
+  border: 6px double black;
+  padding: 15px 0px;
+}
+
+.logo_espelho {
+  width: 130px;
+}
+
+img {
+  width: 120px;
+  margin-top: -5px;
+  margin-left: 10px;
+  margin-bottom: 2px;
+}
+
+.cabecalho_texto {
+  font-size: 18px;
+  width: 570px;
+  margin-top: -70px;
+  margin-left: 120px;
+  text-align: center;
+}
+
+.cabecalho_processo {
+  margin-top: -70px;
+  margin-left: 655px;
+  width: 80px;
+  text-align: center;
+}
+
+.numero {
+  font-size: 16px;
+}
+
+.num_processo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.endereco_espelho {
+  text-align: center;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+table {
+  width: 100%;
+}
+
+.endereco {
+  margin-bottom: 10px;
+}
+
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+tbody td {
+  padding: 0 8px;
+}
+
+.espelho {
+  background-color: gray;
+  color: #FFF;
+  text-align: center;
+  font-size: 18px;
+}
+
+.nome_label {
+  width: 101px;
+}
+
+.destaque {
+  font-size: 17px;
+}
+
+.razao_label {
+  width: 90px;
+}
+
+.labels {
+  font-weight: bold;
+  font-size: 10px;
+}
+
+.info-importantes {
+  /* font-size: 14px; */
+  font-weight: bold;
+}
+
+.procurodro-comprador {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.honorarios {
+  margin-top: 10px;
+}
+
+.honorarios td{
+  width: 150px;
+  font-size: 10px;
+}
+
+.valor {
+  font-weight: bold;
+}
+
+.obs {
+  height: auto;
+  width: 100%;
+  padding-left: 10px;
+}
+
+/* FIM ESPELHO */
+
+@page {
+  margin: 1.45rem;
+}
+
+@media print {
+  .cabecalho_espelho {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+}
