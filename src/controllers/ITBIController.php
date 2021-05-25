@@ -79,11 +79,6 @@
 						for($a; $a < 36; $a++) {
 							$modelo->setValue('a_'.$a, '');
 						}
-
-						// OBSERVAÇÃO
-						if($dados['cpf_conjuge']) {
-
-						}
 					}
 				}
 			} else if(strlen($dados['cpf_cnpj_comprador']) === 14) {
