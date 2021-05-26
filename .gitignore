@@ -1,4 +1,4 @@
 composer.phar
 /vendor/
 .DS_Store
-/public/
+*/arquivos/*
