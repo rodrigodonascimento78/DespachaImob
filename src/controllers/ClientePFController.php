@@ -49,6 +49,8 @@
             $o_expedidor_conjuge = filter_input(INPUT_POST, trim('o_expedidor_conjuge'));
             $profissao_conjuge = filter_input(INPUT_POST, trim('profissao_conjuge'));
             $ass_cartorio_conjuge = filter_input(INPUT_POST, trim('ass_cartorio_conjuge'));
+            $telefone_conjuge = filter_input(INPUT_POST, trim('telefone_conjuge'));
+            $email_conjuge = filter_input(INPUT_POST, trim('email_conjuge'));
 
             if($data_casamento === "") {
                 $data_casamento = '';
@@ -100,6 +102,8 @@
                         'o_expedidor_conjuge' => $o_expedidor_conjuge,
                         'profissao_conjuge' => $profissao_conjuge,
                         'ass_cartorio_conjuge' => $ass_cartorio_conjuge,
+                        'telefone_conjuge' => $telefone_conjuge,
+                        'email_conjuge' => $email_conjuge,
                     ])->execute();
                     $this->render('clientepf', [
                         'divinit' => '<div class="alert alert-success text-center conteudo_mensagem">',

@@ -25,7 +25,7 @@
                 <div class="row">
                     <div class="form-group col-md-3">
                         <label for="cnpj" class="mb-0 col-form-label-sm">CNPJ</label>
-                        <input type="text" name="cnpj" id="cnpj" class="form-control pula cnpj" required>
+                        <input type="text" name="cnpj" id="cnpj" class="form-control pula" required>
                     </div>
                     <div class="form-group col-md-3">
                         <label for="insc_estadual" class="mb-0 col-form-label-sm">Insc. Estadual</label>
@@ -131,7 +131,7 @@
                     </div>
                     <div class="form-group col-md-3">
                         <label for="cpf_socio_1" class="mb-0 col-form-label-sm">CPF</label>
-                        <input type="text" name="cpf_socio_1" id="cpf_socio_1" class="form-control pula cpf" required>
+                        <input type="text" name="cpf_socio_1" id="cpf_socio_1" class="form-control pula" required>
                     </div>
                     <div class="form-group col-md-2">
                         <label for="nacionalidade_socio_1" class="mb-0 col-form-label-sm">Nacionalidade</label>
@@ -278,7 +278,7 @@
                         </div>
                         <div class="form-group col-md-2">
                             <label for="cpf_socio_2" class="mb-0 col-form-label-sm">CPF</label>
-                            <input type="text" name="cpf_socio_2" id="cpf_socio_2" class="form-control pula cpf">
+                            <input type="text" name="cpf_socio_2" id="cpf_socio_2" class="form-control pula">
                         </div>
                         <div class="form-group col-md-2">
                             <label for="nacionalidade_socio_2" class="mb-0 col-form-label-sm">Nacionalidade</label>
@@ -426,7 +426,7 @@
                         </div>
                         <div class="form-group col-md-2">
                             <label for="cpf_socio_3" class="mb-0 col-form-label-sm">CPF</label>
-                            <input type="text" name="cpf_socio_3" id="cpf_socio_3" class="form-control pula cpf">
+                            <input type="text" name="cpf_socio_3" id="cpf_socio_3" class="form-control pula">
                         </div>
                         <div class="form-group col-md-2">
                             <label for="nacionalidade_socio_3" class="mb-0 col-form-label-sm">Nacionalidade</label>
@@ -574,7 +574,7 @@
                         </div>
                         <div class="form-group col-md-2">
                             <label for="cpf_socio_4" class="mb-0 col-form-label-sm">CPF</label>
-                            <input type="text" name="cpf_socio_4" id="cpf_socio_4" class="form-control pula cpf">
+                            <input type="text" name="cpf_socio_4" id="cpf_socio_4" class="form-control pula">
                         </div>
                         <div class="form-group col-md-2">
                             <label for="nacionalidade_socio_4" class="mb-0 col-form-label-sm">Nacionalidade</label>

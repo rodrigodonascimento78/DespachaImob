@@ -19,7 +19,7 @@
                     </div>
                     <div class="form-group col-md-3">
                         <label for="cpf" class="mb-0 col-form-label-sm">CPF</label>
-                        <input type="text" name="cpf" id="cpf" class="form-control pula cpf" required>
+                        <input type="text" name="cpf" id="cpf" class="form-control pula" required>
                     </div>
                     <div class="form-group col-md-2">
                         <label for="nacionalidade" class="mb-0 col-form-label-sm">Nacionalidade</label>
@@ -197,7 +197,7 @@
                     </div>
                     <div class="form-group col-md-2">
                         <label for="cpf_conjuge" class="mb-0 col-form-label-sm">CPF</label>
-                        <input type="text" name="cpf_conjuge" id="cpf_conjuge" class="form-control pula cpf" disabled="true">
+                        <input type="text" name="cpf_conjuge" id="cpf_conjuge" class="form-control pula" disabled="true">
                     </div>
                     <div class="form-group col-md-2">
                         <label for="nacionalidade_conjuge" class="mb-0 col-form-label-sm">Nacionalidade</label>
@@ -232,6 +232,16 @@
                         <input type="text" name="ass_cartorio_conjuge" id="ass_cartorio_conjuge" class="form-control pula" disabled="true">
                     </div>
                 </div><!-- Row 12 -->
+                <div class="row">
+                    <div class="form-group col-md-3">
+                        <label for="telefone_conjuge" class="mb-0 col-form-label-sm">Telefone</label>
+                        <input type="text" name="telefone_conjuge" id="telefone_conjuge" class="form-control pula" disabled>
+                    </div>
+                    <div class="form-group col-md-9">
+                        <label for="email_conjuge" class="mb-0 col-form-label-sm">E-mail</label>
+                        <input type="text" name="email_conjuge" id="email_conjuge" class="form-control pula" disabled>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="form-group col-md-12">
                         <button type="submit" class="btn btn_submit mb-5 mt-3">Enviar</button>

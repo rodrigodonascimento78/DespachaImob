@@ -20,7 +20,15 @@ $render('header'); ?>
                     </div>
                     <div class="form-group col-md-3">
                         <label for="fase" class="mb-0 col-form-label-sm">Fase da Construção</label>
-                        <input type="text" class="form-control pula" name="fase" id="fase" required>
+                        <select name="fase" id="fase" class="form-control pula" require>
+                            <option></option>
+                            <option>INEXISTENTE</option>
+                            <option>FUNDAÇÃO</option>
+                            <option>ESTRUTURA</option>
+                            <option>ALVENARIA</option>
+                            <option>ACABAMENTO</option>
+                            <option>CONCLUÍDA</option>
+                        </select>
                     </div>
                     <div class="form-group col-md-3">
                         <label for="natureza" class="mb-0 col-form-label-sm">Natureza da Transmissão / Cessão</label>
@@ -66,8 +74,7 @@ $render('header'); ?>
                 <div class="row d-flex justify-content-center">
                     <div class="form-group col-md-3">
                         <label for="f_pagamento" class="mb-0 col-form-label-sm">Forma de pagamento (ITBI)</label>
-                        <select name="f_pagamento" id="f_pagamento" class="form-control f_pagamento pula" required>
-                            <option></option>
+                        <select name="f_pagamento" id="f_pagamento" class="form-control f_pagamento pula">
                             <option value="avista">À vista</option>
                             <option class="parcelado" value="parcelado">Parcelado</option>
                         </select>

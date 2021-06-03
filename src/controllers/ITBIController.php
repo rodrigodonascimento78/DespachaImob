@@ -426,8 +426,6 @@
 			$modelo->setValue('parcelas', $parcelas);
 		}
 
-		$modelo->setValue('t', str_repeat('&#9619;', 68));
-
         $modelo->saveAs('assets/arquivos/ITBI - '.$item_pesquisado.'.docx');
 		$this->redirect('itbi');
     }

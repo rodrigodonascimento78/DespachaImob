@@ -260,6 +260,16 @@ $(() => {
                                     </div>
                                 </div><!-- Row 12 -->
                                 <div class="row">
+                                    <div class="form-group col-md-3">
+                                        <label for="telefone_conjuge" class="mb-0 col-form-label-sm">Telefone</label>
+                                        <input type="text" name="telefone_conjuge" id="telefone_conjuge" class="form-control pula" value="`+ result[0][0].telefone_conjuge +`" />
+                                    </div>
+                                    <div class="form-group col-md-9">
+                                        <label for="email_conjuge" class="mb-0 col-form-label-sm">E-mail</label>
+                                        <input type="text" name="email_conjuge" id="email_conjuge" class="form-control pula" value="`+ result[0][0].email_conjuge +`" />
+                                    </div>
+                                </div>
+                                <div class="row">
                                     <div class="form-group col-md-12">
                                         <button type="submit" id="btn_editar_pf" class="btn btn_editar mb-4 mt-3">Editar</button>
                                         <button type="button" id="btn_fechar_pf" class="btn btn_submit btn_fechar mb-4 mt-3">Fechar</button>

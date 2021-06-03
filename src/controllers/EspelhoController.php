@@ -126,7 +126,9 @@ class EspelhoController extends Controller
                                     </tr>
                                     <tr>
                                         <td class="labels">Ass. Cartório:</td>
-                                        <td colspan="8" class="info-importantes">'. $dados['ass_cartorio'] .'</td>
+                                        <td colspan="2" class="info-importantes">'. $dados['ass_cartorio'] .'</td>
+                                        <td class="labels">E-mail:</td>
+                                        <td colspan="4" class="info-importantes">'. $dados['email_1'] .'</td>
                                     </tr>
                                 </tbody>
                             </table>';
@@ -172,7 +174,9 @@ class EspelhoController extends Controller
                                         </tr>
                                         <tr>
                                             <td class="labels">Ass. Cartório:</td>
-                                            <td colspan="7" class="info-importantes">'. $dados['ass_cartorio_conjuge'] .'</td>
+                                            <td colspan="2" class="info-importantes">'. $dados['ass_cartorio_conjuge'] .'</td>
+                                            <td class="labels">E-mail:</td>
+                                            <td colspan="4" class="info-importantes">'. $dados['email_conjuge'].'</td>
                                         </tr>
                                     </tbody>
                                 </table>';
@@ -206,11 +210,11 @@ class EspelhoController extends Controller
                             </tr>
                             <tr>
                                 <td class="labels">Celular:</td>
-                                <td class="info-importantes">'. $dados['celular'] .'</td>
+                                <td colspan="2" class="info-importantes">'. $dados['celular'] .'</td>
                                 <td class="labels">Comercial:</td>
-                                <td class="info-importantes">'. $dados['comercial'] .'</td>
-                                <td class="labels">E-mail:</td>
-                                <td colspan="4" class="info-importantes">'. $dados['email_1'] .'</td>
+                                <td colspan="2" class="info-importantes">'. $dados['comercial'] .'</td>
+                                <td class="labels">Recado:</td>
+                                <td colspan="2" class="info-importantes">'. $dados['recado'] .'</td>
                             </tr>
                         </tbody>
                     </table>';
