@@ -21,7 +21,7 @@ class EspelhoController extends Controller
 
         public function addEspelho()
         {
-            $item_pesquisado = filter_input(INPUT_POST, 'item_pesquisado');
+            $item_pesquisado = filter_input(INPUT_POST, trim('item_pesquisado'));
             $dados_processo = [];
             $dados_comprador_pf = [];
             $dados_comprador_pj = [];

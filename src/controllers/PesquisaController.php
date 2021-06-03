@@ -6,7 +6,7 @@
     {
         public function index()
         {
-            $cpf = filter_input(INPUT_GET, 'cpf');
+            $cpf = filter_input(INPUT_GET, trim('cpf'));
             $this->render('pesquisa', ['cpf' => $cpf]);
         }
     }

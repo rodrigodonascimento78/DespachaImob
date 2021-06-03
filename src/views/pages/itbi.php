@@ -39,7 +39,7 @@ $render('header'); ?>
                 <div class="row">
                     <div class="form-group col-md-3">
                         <label for="dt_transacao" class="mb-0 col-form-label-sm">Data da transação</label>
-                        <input type="date" class="form-control pula" name="dt_transacao" required>
+                        <input type="date" class="form-control pula" name="dt_transacao">
                     </div>
                     <div class="form-group col-md-3">
                         <label for="contrato" class="mb-0 col-form-label-sm">Foi firmado contato?</label>
@@ -65,7 +65,7 @@ $render('header'); ?>
                 </div><!-- Row 3 -->
                 <div class="row d-flex justify-content-center">
                     <div class="form-group col-md-3">
-                        <label for="f_pagamento" class="mb-0 col-form-label-sm">Foma de pagamento</label>
+                        <label for="f_pagamento" class="mb-0 col-form-label-sm">Forma de pagamento (ITBI)</label>
                         <select name="f_pagamento" id="f_pagamento" class="form-control f_pagamento pula" required>
                             <option></option>
                             <option value="avista">À vista</option>

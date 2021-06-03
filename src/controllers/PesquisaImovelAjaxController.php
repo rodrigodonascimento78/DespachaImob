@@ -9,7 +9,8 @@
     {
         public function index()
         {
-            $item_pesquisado = filter_input(INPUT_POST, 'item_pesquisado');
+            $item_pesquisado = filter_input(INPUT_POST, trim('item_pesquisado'));
+
             $imovel_data = Imovei::select()->where('matricula', $item_pesquisado)->execute();
             $processo = Processo::select()->where('matricula_processo', $item_pesquisado)->execute();
 

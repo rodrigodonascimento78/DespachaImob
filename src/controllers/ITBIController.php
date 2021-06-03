@@ -23,17 +23,17 @@
 
     public function addITBI()
     {
-        $item_pesquisado = trim(filter_input(INPUT_POST, 'item_pesquisado'));
-		$percentual = filter_input(INPUT_POST, 'percentual');
-		$fase = filter_input(INPUT_POST, 'fase');
-		$natureza = filter_input(INPUT_POST, 'natureza');
-		$natureza_especificar = filter_input(INPUT_POST, 'natureza_especificar');
-		$dt_transacao = filter_input(INPUT_POST, 'dt_transacao');
-		$contrato = filter_input(INPUT_POST, 'contrato');
-		$tipo_contrato = filter_input(INPUT_POST, 'tipo_contrato');
-		$outro_especificar = filter_input(INPUT_POST, 'outro_especificar');
-		$f_pagamento = filter_input(INPUT_POST, 'f_pagamento');
-		$parcelas = filter_input(INPUT_POST, 'parcelas');
+        $item_pesquisado = trim(filter_input(INPUT_POST, trim('item_pesquisado')));
+		$percentual = filter_input(INPUT_POST, trim('percentual'));
+		$fase = filter_input(INPUT_POST, trim('fase'));
+		$natureza = filter_input(INPUT_POST, trim('natureza'));
+		$natureza_especificar = filter_input(INPUT_POST, trim('natureza_especificar'));
+		$dt_transacao = filter_input(INPUT_POST, trim('dt_transacao'));
+		$contrato = filter_input(INPUT_POST, trim('contrato'));
+		$tipo_contrato = filter_input(INPUT_POST, trim('tipo_contrato'));
+		$outro_especificar = filter_input(INPUT_POST, trim('outro_especificar'));
+		$f_pagamento = filter_input(INPUT_POST, trim('f_pagamento'));
+		$parcelas = filter_input(INPUT_POST, trim('parcelas'));
 
         // CARREGA O MODELO DO DOCUMENTO (ITBI)
         $modelo = new TemplateProcessor('assets/arquivos/ITBI_Teste_edicao.docx');

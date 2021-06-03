@@ -14,7 +14,7 @@ class PesquisaClienteAjaxController extends Controller
         public function index()
         {
             // Dado recebido da pesquisa
-            $item_pesquisado = filter_input(INPUT_POST, 'item_pesquisado');
+            $item_pesquisado = filter_input(INPUT_POST, trim('item_pesquisado'));
             $tamanho_cpf = strlen($item_pesquisado);
 
             if($tamanho_cpf === 11) {

@@ -172,7 +172,7 @@ $render('header'); ?>
         </div><!-- Row -->
         <div class="row justify-content-end mt-4">
             <div class="form-group">
-                <button class="btn btn_submit" type="button" name="btn_cria_processo" id="btn_cria_processo" disabled>Criar Processo</button>
+                <button class="btn btn_submit" type="button" name="btn_cria_processo" id="btn_cria_processo">Criar Processo</button>
             </div>
         </div><!-- Row -->
         <form method="POST" action="<?= $base; ?>processo" class="form_processo">

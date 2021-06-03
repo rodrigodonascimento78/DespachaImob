@@ -30,14 +30,14 @@
 
         public function addAction()
         {
-            $processo_numero = filter_input(INPUT_POST, 'processo_numero');
-            $data_cadastro_processo = filter_input(INPUT_POST, 'data_cadastro_processo');
-            $i_imovel = filter_input(INPUT_POST, 'i_imovel');
-            $m_imovel = filter_input(INPUT_POST, 'm_imovel');
-            $indicacao = filter_input(INPUT_POST, 'indicacao');
-            $honorarios = filter_input(INPUT_POST, 'honorarios');
-            $certidoes = filter_input(INPUT_POST, 'certidoes');
-            $outros = filter_input(INPUT_POST, 'outros');
+            $processo_numero = filter_input(INPUT_POST, trim('processo_numero'));
+            $data_cadastro_processo = filter_input(INPUT_POST, trim('data_cadastro_processo'));
+            $i_imovel = filter_input(INPUT_POST, trim('i_imovel'));
+            $m_imovel = filter_input(INPUT_POST, trim('m_imovel'));
+            $indicacao = filter_input(INPUT_POST, trim('indicacao'));
+            $honorarios = filter_input(INPUT_POST, trim('honorarios'));
+            $certidoes = filter_input(INPUT_POST, trim('certidoes'));
+            $outros = filter_input(INPUT_POST, trim('outros'));
             $obs = filter_input(INPUT_POST, 'obs');
             
             

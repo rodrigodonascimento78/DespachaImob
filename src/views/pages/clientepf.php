@@ -182,11 +182,11 @@
                 <div class="row">
                     <div class="form-group col-md-6">
                         <label for="cartorio_casamento">Cartório de Registro Civíl de Pessoa Naturais</label>
-                        <input type="text" id="cartorio_casamento" name="cartorio_casamento" class="form-control pula" required>
+                        <input type="text" id="cartorio_casamento" name="cartorio_casamento" class="form-control pula">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="matricula_certidao">Matrícula Certidão</label>
-                        <input type="text" id="matricula_certidao" name="matricula_certidao" class="form-control pula" required>
+                        <input type="text" id="matricula_certidao" name="matricula_certidao" class="form-control pula">
                     </div>
                 </div><!-- row 9 -->
                 <h1 class="text-center mb-3">Dados do Cônjuge</h1>

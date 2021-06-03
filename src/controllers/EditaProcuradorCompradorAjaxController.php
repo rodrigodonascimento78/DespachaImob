@@ -12,10 +12,10 @@
     {
         public function index()
         {
-            $numero_processo = filter_input(INPUT_POST, 'numero_processo');
-            $id_cliente_proc_comprador = filter_input(INPUT_POST, 'id_cliente_proc_comprador');
-            $id_proc_comprador = filter_input(INPUT_POST, 'id_proc_comprador');
-            $cpf_proc_comprador = filter_input(INPUT_POST, 'cpf_proc_comprador');
+            $numero_processo = filter_input(INPUT_POST, trim('numero_processo'));
+            $id_cliente_proc_comprador = filter_input(INPUT_POST, trim('id_cliente_proc_comprador'));
+            $id_proc_comprador = filter_input(INPUT_POST, trim('id_proc_comprador'));
+            $cpf_proc_comprador = filter_input(INPUT_POST, trim('cpf_proc_comprador'));
 
             $comprador = Compradore::select()->where('cpf_cnpj_comprador', $cpf_proc_comprador)->where('num_processo_comprador', intval($numero_processo))->execute();
             $procurador_comprador = Compradores_Procuradore::select()->where('cpf_cnpj_proc_comprador', $cpf_proc_comprador)->where('num_processo_proc_comprador', intval($numero_processo))->execute();

@@ -7,7 +7,8 @@
     {
         public function index()
         {
-            $matricula_imovel = filter_input(INPUT_POST, 'matricula_imovel');
+            $matricula_imovel = filter_input(INPUT_POST, trim('matricula_imovel'));
+            
             $data = Imovei::select()->where('matricula', $matricula_imovel)->execute();
 
             if(count($data) !== 0) {

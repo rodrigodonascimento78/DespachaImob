@@ -8,10 +8,10 @@
     {
         public function index()
         {
-            $numero_processo = filter_input(INPUT_POST, 'processo_numero');
-            $honorarios = filter_input(INPUT_POST, 'honorarios');
-            $certidoes = filter_input(INPUT_POST, 'certidoes');
-            $outros = filter_input(INPUT_POST, 'outros');
+            $numero_processo = filter_input(INPUT_POST, trim('processo_numero'));
+            $honorarios = filter_input(INPUT_POST, trim('honorarios'));
+            $certidoes = filter_input(INPUT_POST, trim('certidoes'));
+            $outros = filter_input(INPUT_POST, trim('outros'));
             $observa = filter_input(INPUT_POST, 'observa');
 
             Processo::update()->set([

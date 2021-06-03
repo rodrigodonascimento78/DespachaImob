@@ -15,7 +15,7 @@
     {
         public function index()
         {
-            $item_pesquisado = filter_input(INPUT_POST, 'item_pesquisado');
+            $item_pesquisado = filter_input(INPUT_POST, trim('item_pesquisado'));
             $processo = [];
             $compradores_pf = [];
             $compradores_pj = [];

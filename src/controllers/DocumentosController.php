@@ -13,11 +13,8 @@
         public function addAction()
         {
             $opcao = filter_input(INPUT_POST, 'opcao');
-            $item_pesquisado = filter_input(INPUT_POST, 'item_pesquisado');
+            $item_pesquisado = filter_input(INPUT_POST, trim('item_pesquisado'));
             $arquivos_form = $_FILES['arquivos'];
-            $acao = filter_input(INPUT_POST, 'acao');
-            // $amount = count($arquivos_form['name']);
-            $arquivos = array();
             
             if($item_pesquisado !== "") {
                 if($opcao === 'cliente' && strlen($item_pesquisado) === 11) {

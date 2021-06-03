@@ -8,7 +8,7 @@
     {
         public function index()
         {
-            $id = filter_input(INPUT_POST, 'id');
+            $id = filter_input(INPUT_POST, trim('id'));
             Tarefa::update()->set('id_status', 2)->where('id', $id)->execute();
 
         }
