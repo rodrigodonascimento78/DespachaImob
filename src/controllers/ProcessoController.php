@@ -39,10 +39,13 @@
             $certidoes = filter_input(INPUT_POST, trim('certidoes'));
             $outros = filter_input(INPUT_POST, trim('outros'));
             $obs = filter_input(INPUT_POST, 'obs');
+            $btn_deletar_processo = filter_input(INPUT_POST, 'btn_deletar_processo');
             
             
             if(isset($processo_numero)) {
-                mkdir('assets/arquivos/'.$processo_numero);
+                if(!file_exists('assets/arquivos/'.$processo_numero)) {
+                    mkdir('assets/arquivos/'.$processo_numero);
+                }
                 Processo::insert([
                     'numero_processo' => $processo_numero,
                     'data_cadastro_processo' => $data_cadastro_processo,
@@ -67,6 +70,13 @@
                     'divfim' => '</div>',
                     'proc_numero' => $id,
                 ]);
+            }
+
+            if(isset($btn_deletar_processo)) {
+                Compradore::delete()->wher('num_processo_comprador', $processo_numero)->execute();
+                Compradores_Procuradore::delete()->wher('num_processo_proc_comprador', $processo_numero)->execute();
+                Vendedore::delete()->wher('num_processo_vendedor', $processo_numero)->execute();
+                Vendedores_Procuradore::delete()->wher('num_processo_proc_vendedor', $processo_numero)->execute();
             }
         }
     }

@@ -545,9 +545,13 @@ $(() => {
             $('.lista > td').remove();
             $('.lixeira').remove();
 
-            $(`<di class="row">
+            $(`<div class="row">
                 <div class="form-group">
-                    <button type="submit" id="btn_salvar_processo" class="btn btn-success btn-lg mt-4 ml-3 mr-5">Salvar</button>
+                    <button type="submit" id="btn_salvar_processo" name="btn_salvar_processo" class="btn btn-success btn-lg mt-4 ml-3 mr-5">Salvar</button>
+                </div>
+                <div class="form-group">
+                    <button  type="button" id="btn_deletar_processo" name="btn_deletar_processo" class="btn btn_deletar btn-lg mt-4">Excluir</button>
+                </div>
             </div>`).appendTo('.formulario_processo');
 
             $('.btn_cpf_comprador').attr('disabled', true);
@@ -557,5 +561,29 @@ $(() => {
             $('.btn_matricula_imovel').attr('disabled', true);
         }
     });
+    /* -------------------------------------------------------- */
+
+    /* CONTROLA O BOTÃO EXCLUIR O PROCESSO */
+
+    $(document).on('click', '#btn_deletar_processo', function() {
+        let processo_numero = $('.processo_numero').val();
+        $.ajax({
+            url: 'http://despachaimob.com/deletaprocessoajax',
+            crossDomain: true,
+            method: 'POST',
+            data: {
+                processo_numero: processo_numero,
+            },
+        });
+
+        $('.formulario_processo').remove();
+        $('.btn_cpf_comprador').removeAttr('disabled');
+        $('.btn_cpf_procurador_comprador').removeAttr('disabled');
+        $('.btn_cpf_vendedor').removeAttr('disabled');
+        $('.btn_cpf_procurador_vendedor').removeAttr('disabled');
+        $('.btn_matricula_imovel').removeAttr('disabled');
+        $('#cpf_comprador').focus();
+    });
+
     /* -------------------------------------------------------- */
 });

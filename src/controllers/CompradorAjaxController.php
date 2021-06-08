@@ -85,20 +85,20 @@
             } else if($tamanho_cpf === 14) {
                 
                 // VERIFICA SE COMPRADOR NÃO REPETE
-                $comprador = Compradore::select()->where('cpf_cnpj_comprador', $c_comprador)->where('num_processo_comprador', intval($num_processo_comprador))->execute();
-                if(count($comprador) === 1) {
+                $comprador_pj = Compradore::select()->where('cpf_cnpj_comprador', $c_comprador)->where('num_processo_comprador', intval($num_processo_comprador))->execute();
+                if(count($comprador_pj) === 0) {
 
                     // VERIFICA SE COMPRADOR É DIFERENTE DO PROCURADOR DO COMPRADOR
                     $proc_comprador = Compradores_Procuradore::select()->where('cpf_cnpj_proc_comprador', $c_comprador)->where('num_processo_proc_comprador', intval($num_processo_comprador))->execute();
-                    if(count($proc_comprador) === 1) {
+                    if(count($proc_comprador) === 0) {
 
                         // VERIFICA SE COMPRADOR É DIFERENTE DO VENDEDOR
                         $vendedor = Vendedore::select()->where('cpf_cnpj_vendedor', $c_comprador)->where('num_processo_vendedor', intval($num_processo_comprador))->execute();
-                        if(count($vendedor) === 1) {
+                        if(count($vendedor) === 0) {
 
                             // VERIFICA SE COMPRADOR É DIFERENTE DO PROCURADOR DO VENDEDOR
                             $proc_vendedor = Vendedores_Procuradore::select()->where('cpf_cnpj_proc_vendedor', $c_comprador)->where('num_processo_proc_vendedor', intval($num_processo_comprador))->execute();
-                            if(count($proc_vendedor) === 1) {
+                            if(count($proc_vendedor) === 0) {
                                 $data = PJCliente::select()->where('cnpj', $c_comprador)->execute();
 
                                 if(count($data) !== 0) {
@@ -142,7 +142,7 @@
                 } else {
                     $this->render('compradorajax', [
                         'pessoa' => 'nenhuma',
-                        'mensagem' => 'Cliente já foi selecionado como COMPRADOR.',
+                        'mensagem' => 'Cliente já foi selecionado como COMPRADOR (PJ).',
                     ]);
                 }
             }  else if(($tamanho_cpf !== 11) || ($tamanho_cpf !== 14)) {

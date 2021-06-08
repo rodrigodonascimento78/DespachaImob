@@ -222,5 +222,46 @@
             return($rt ? trim( $rt ) : "zero");
 
         }
+
+        public static function formataMes($numero = 01) {
+            switch ($numero) {
+                case '01':
+                    return 'janeiro';
+                    break;
+                case '02':
+                    return 'fevereiro';
+                    break;
+                case '03':
+                    return 'março';
+                    break;
+                case '04':
+                    return 'abril';
+                    break;
+                case '05':
+                    return 'maio';
+                    break;
+                case '06':
+                    return 'junho';
+                    break;
+                case '07':
+                    return 'julho';
+                    break;
+                case '08':
+                    return 'agosto';
+                    break;
+                case '09':
+                    return 'setembro';
+                    break;
+                case '10':
+                    return 'outubro';
+                    break;
+                case '11':
+                    return 'novembro';
+                    break;
+                case '12':
+                    return 'dezembro';
+                    break;
+            }
+        }
     }
 ?>

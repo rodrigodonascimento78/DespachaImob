@@ -72,6 +72,16 @@ $render('header'); ?>
                     </div>
                 </div><!-- Row 3 -->
                 <div class="row d-flex justify-content-center">
+                    <div class="form-group col-md-4">
+                        <div class="form-check mt-4">
+                            <input class="form-check-input preenche_dt_transacao" id="preenche_dt_transacao" type="checkbox" required />
+                            <label for="preenche_dt_transacao" class="mb-0 form-check-label preenche_dt_transacao">Data transação será preenchida?</label>
+                        </div>
+                        <!-- <select name="preenche_dt_transacao" id="preenche_dt_transacao" class="form-control preenche_dt_transacao pula" require>
+                            <option value="sim">Sim</option>
+                            <option value="nao">Não</option>
+                        </select> -->
+                    </div>
                     <div class="form-group col-md-3">
                         <label for="f_pagamento" class="mb-0 col-form-label-sm">Forma de pagamento (ITBI)</label>
                         <select name="f_pagamento" id="f_pagamento" class="form-control f_pagamento pula">
@@ -92,7 +102,7 @@ $render('header'); ?>
                 </div>
                 <div class="row">
                     <div class="form-group col-md-2">
-                        <button type="submit" class="btn btn_submit" name="gera_itbi" id="gera_itbi">Gerar ITBI</button>
+                        <button type="submit" class="btn btn_submit" name="gera_itbi" id="gera_itbi" disabled>Gerar ITBI</button>
                     </div>
                 </div><!-- Row  -->
             </form>

@@ -18,6 +18,8 @@ $(() => {
         let o_expedidor_conjuge = $('#o_expedidor_conjuge');
         let profissao_conjuge = $('#profissao_conjuge');
         let ass_cartorio_conjuge = $('#ass_cartorio_conjuge');
+        let telefone_conjuge = $('#telefone_conjuge');
+        let email_conjuge = $('#email_conjuge');
 
         switch (tipo_regime) {
             case '':
@@ -38,6 +40,8 @@ $(() => {
                 o_expedidor_conjuge.attr('disabled', true);
                 profissao_conjuge.attr('disabled', true);
                 ass_cartorio_conjuge.attr('disabled', true);
+                telefone_conjuge.attr('disabled', true);
+                email_conjuge.attr('disabled', true);
                 regime.removeAttr('required', 'required');
                 break;
             case 'solteiro':
@@ -79,6 +83,8 @@ $(() => {
         let o_expedidor_conjuge = $('#o_expedidor_conjuge');
         let profissao_conjuge = $('#profissao_conjuge');
         let ass_cartorio_conjuge = $('#ass_cartorio_conjuge');
+        let telefone_conjuge = $('#telefone_conjuge');
+        let email_conjuge = $('#email_conjuge');
 
         switch(regime) {
             case '':
@@ -98,6 +104,8 @@ $(() => {
                 o_expedidor_conjuge.attr('disabled', true);
                 profissao_conjuge.attr('disabled', true);
                 ass_cartorio_conjuge.attr('disabled', true);
+                telefone_conjuge.attr('disabled', true);
+                email_conjuge.attr('disabled', true);
                 tipo_regime.val('');
                 break;
             default:
@@ -111,6 +119,8 @@ $(() => {
                 o_expedidor_conjuge.attr('disabled', false);
                 profissao_conjuge.attr('disabled', false);
                 ass_cartorio_conjuge.attr('disabled', false);
+                telefone_conjuge.attr('disabled', false);
+                email_conjuge.attr('disabled', false);
                 break;
         }
     });

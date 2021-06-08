@@ -52,3 +52,10 @@ $router->post('/novoespelho', 'EspelhoController@addEspelho');
 
 $router->get('/itbi', 'ITBIController@index');
 $router->post('/novoitbi', 'ITBIController@addITBI');
+
+$router->get('/procuracaoitbi', 'ProcuracaoITBIController@index');
+$router->post('/novaprocuracaoitbi', 'ProcuracaoITBIController@addProcuracaoITBI');
+
+$router->post('/deletaprocessoajax', 'DeletaProcessoAjaxController@index');
+
+$router->get('/certidoes', 'CertidoesController@index');

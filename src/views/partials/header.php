@@ -28,14 +28,13 @@
                         <a href="<?= $base; ?>nova_tarefa" class="dropdown-item">Tarefas</a>
                     </div>
                 </li>
-                <li class="nav-item"><a class="nav-link" href="certidoes.html">Certidoes</a></li>
+                <li class="nav-item"><a class="nav-link" href="<?= $base; ?>certidoes">Certidoes</a></li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Formulários</a>
                     <div class="dropdown-menu">
-                        <a href="declaracao" class="dropdown-item">Declaração</a>
-                        <a href="espelho" class="dropdown-item">Espelho</a>
-                        <a href="itbi" class="dropdown-item">ITBI</a>
-                        <a href="procuracao" class="dropdown-item">Procuração</a>
+                        <a href="<?= $base; ?>espelho" class="dropdown-item">Espelho</a>
+                        <a href="<?= $base; ?>itbi" class="dropdown-item">ITBI</a>
+                        <a href="<?= $base; ?>procuracaoitbi" class="dropdown-item">Procuração</a>
                     </div>
                 </li>
                 <li class="nav-item"><a class="nav-link" href="<?= $base; ?>pesquisa">Pesquisa</a></li>

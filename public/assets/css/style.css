@@ -37,12 +37,12 @@ nav {
   background-color: #2E4773 !important;
 }
 nav img {
-  height: 70px;
+  height: 4.375rem;
 }
 nav .nav a {
   color: #D3F5F4 !important;
   font-family: ubuntu_medium;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 nav .nav a:hover {
   background-color: #D3F5F4 !important;
@@ -51,11 +51,11 @@ nav .nav a:hover {
 nav .dropdown-menu {
   background-color: #47749C !important;
   color: #D3F5F4 !important;
-  box-shadow: -3px 3px 7px 3px #393B41 !important;
+  box-shadow: -0.1875rem 0.1875rem 0.4375rem 0.1875rem #393B41 !important;
 }
 
 main {
-  min-height: calc(100vh - 130px);
+  min-height: calc(100vh - 8.125rem);
 }
 
 main h1 {
@@ -73,16 +73,17 @@ label {
 }
 
 .td_endereco {
-  width: 400px;
+  width: 25rem;
 }
 
 main form select {
-  width: 150px;
+  width: 9.375rem;
 }
 
 main form textarea {
-  padding: 5px;
-  width: 500px;
+  padding: 0.3125rem;
+  width: 31.25rem;
+  /* height: 300px; */
   resize: none;
 }
 
@@ -295,6 +296,55 @@ h4 {
 .arquivos_mensagem {
   font-size: 20px;
 }
+
+.links_certidoes {
+  display: grid;
+  grid-row-gap: 4.0625rem;
+  grid-template-areas: 
+    'receita_federal    justica_federal     tjmg'
+    'justica_trabalho   tribunal_trabalho   receita_estadual'
+    'caixa              caixa               caixa'
+    ;
+}
+
+.link_certidao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.link_certidao img {
+  width: 12.5rem;
+}
+
+.receita_federal {
+  grid-area: receita_federal;
+}
+
+.justica_federal {
+  grid-area: justica_federal;
+}
+
+.tjmg {
+  grid-area: tjmg;
+}
+
+.justica_trabalho {
+  grid-area: justica_trabalho;
+}
+
+.tribunal_trabalho {
+  grid-area: tribunal_trabalho;
+}
+
+.receita_estadual {
+  grid-area: receita_estadual;
+}
+
+.caixa {
+  grid-area: caixa;
+}
+
 
 footer {
   width: 100%;

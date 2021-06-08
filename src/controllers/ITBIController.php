@@ -36,7 +36,7 @@
 		$parcelas = filter_input(INPUT_POST, trim('parcelas'));
 
         // CARREGA O MODELO DO DOCUMENTO (ITBI)
-        $modelo = new TemplateProcessor('assets/arquivos/ITBI_Teste_edicao.docx');
+        $modelo = new TemplateProcessor('assets/modelos/Modelo ITBI.docx');
       
 		// COMPRADOR
         $comprador = Compradore::select()->where('num_processo_comprador', $item_pesquisado)->execute();
@@ -429,5 +429,29 @@
         $modelo->saveAs('assets/arquivos/ITBI - '.$item_pesquisado.'.docx');
 		$this->redirect('itbi');
     }
+
+	public function indexProcuracaoITBI()
+	{
+		$this->render('procuracaoitbi');
+	}
+
+	public function addProcuracaoITBI()
+	{
+		$item_pesquisado = filter_input(INPUT_POST, trim('item_pesquisado'));
+
+		$processo = Processo::select()->where('numero_processo', $item_pesquisado)->execute();
+		$comprador = Compradore::select()->where('num_processo_comprador', $item_pesquisado)->execute();
+
+		if(count($comprador) !== 0) {
+			if($comprador[0]['cpf_conjuge']) {
+				$modelo_sem_conjuge = new TemplateProcessor('assets/modelos/Modelo Procuracao ITBI Conjuge.docx');
+				
+				$modelo_sem_conjuge->setValue('processo', $processo[0]['numero_processo']);
+
+				$modelo_sem_conjuge->save('assets/arquivos/Procuracao -'.$item_pesquisado.'.docx');
+				$this->redirect('procuracaoitbi');
+			}
+		}
+	}
   }
 ?>

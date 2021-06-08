@@ -177,5 +177,13 @@ $(() => {
         }
     });
 
+    $(document).on('click', '.preenche_dt_transacao', function() {
+        if($(this).prop('checked') === true) {
+            $('#gera_itbi').removeAttr('disabled');
+        } else {
+            $('#gera_itbi').attr('disabled', true);
+        }
+    });
+
     /* -------------------------------------------------------- */
 });

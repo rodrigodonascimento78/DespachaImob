@@ -12,16 +12,6 @@ $render('header'); ?>
                 echo $mensagem;
                 echo $divfim;
             }
-
-            if(isset($honorarios)) {
-                echo $honorarios;
-                echo '<br>';
-                echo $certidoes;
-                echo "<br>";
-                echo $outros;
-                echo '<br>';
-                echo $obs;
-            }
         ?>
         
         <div class="row">

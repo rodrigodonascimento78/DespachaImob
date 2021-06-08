@@ -262,11 +262,11 @@ $(() => {
                                 <div class="row">
                                     <div class="form-group col-md-3">
                                         <label for="telefone_conjuge" class="mb-0 col-form-label-sm">Telefone</label>
-                                        <input type="text" name="telefone_conjuge" id="telefone_conjuge" class="form-control pula" value="`+ result[0][0].telefone_conjuge +`" />
+                                        <input type="text" name="telefone_conjuge" id="telefone_conjuge" class="form-control pula" value="`+ result[0][0].telefone_conjuge +`" disabled="true" />
                                     </div>
                                     <div class="form-group col-md-9">
                                         <label for="email_conjuge" class="mb-0 col-form-label-sm">E-mail</label>
-                                        <input type="text" name="email_conjuge" id="email_conjuge" class="form-control pula" value="`+ result[0][0].email_conjuge +`" />
+                                        <input type="text" name="email_conjuge" id="email_conjuge" class="form-control pula" value="`+ result[0][0].email_conjuge +`" disabled="true" />
                                     </div>
                                 </div>
                                 <div class="row">
@@ -298,6 +298,8 @@ $(() => {
                         let o_expedidor_conjuge = $('#o_expedidor_conjuge');
                         let profissao_conjuge = $('#profissao_conjuge');
                         let ass_cartorio_conjuge = $('#ass_cartorio_conjuge');
+                        let telefone_conjuge = $('#telefone_conjuge');
+                        let email_conjuge = $('#email_conjuge');
                         
                         $('#tipo_regime').val(result[0][0].tipo_regime);
                         $('#regime').val(result[0][0].regime);
@@ -313,6 +315,8 @@ $(() => {
                             o_expedidor_conjuge.attr('disabled', true);
                             profissao_conjuge.attr('disabled', true);
                             ass_cartorio_conjuge.attr('disabled', true);
+                            telefone_conjuge.attr('disabled', true);
+                            email_conjuge.attr('disabled', true);
                             u_estavel.removeAttr('disabled');
                         } else {
                             regime.removeAttr('disabled');
@@ -332,6 +336,8 @@ $(() => {
                             o_expedidor_conjuge.removeAttr('disabled');
                             profissao_conjuge.removeAttr('disabled');
                             ass_cartorio_conjuge.removeAttr('disabled');
+                            telefone_conjuge.removeAttr('disabled');
+                            email_conjuge.removeAttr('disabled');
                         }
                         
                         if(result[1].length !== 0) {
@@ -1317,90 +1323,6 @@ $(() => {
                                 $('#proprietario').attr('checked', true);
                             }
                         }
-
-                        if(result[0][0].ventilador_teto === 'ventilador_teto') {
-                            $('#ventilador_teto').attr('checked', true);
-                        }
-
-                        if(result[0][0].ar_condicionado === 'ar_condicionado') {
-                            $('#ar_condicionado').attr('checked', true);
-                        }
-
-                        if(result[0][0].arm_banheiro === 'arm_banheiro') {
-                            $('#arm_banheiro').attr('checked', true);
-                        }
-
-                        if(result[0][0].arm_cozinha === 'arm_cozinha') {
-                            $('#arm_cozinha').attr('checked', true);
-                        }
-
-                        if(result[0][0].arm_quarto === 'arm_quarto') {
-                            $('#arm_quarto').attr('checked', true);
-                        }
-
-                        if(result[0][0].granito === 'granito') {
-                            $('#granito').attr('checked', true);
-                        }
-
-                        if(result[0][0].blindex === 'blindex') {
-                            $('#blindex').attr('checked', true);
-                        }
-
-                        if(result[0][0].fachada_pintura === 'fachada_pintura') {
-                            $('#fachada_pintura').attr('checked', true);
-                        }
-
-                        if(result[0][0].seguranca_portao === 'seguranca_portao') {
-                            $('#seguranca_portao').attr('checked', true);
-                        }
-
-                        if(result[0][0].gas === 'gas') {
-                            $('#gas').attr('checked', true);
-                        }
-
-                        if(result[0][0].circuito_tv === 'circuito_tv') {
-                            $('#circuito_tv').attr('checked', true);
-                        }
-
-                        if(result[0][0].portaria === 'portaria') {
-                            $('#portaria').attr('checked', true);
-                        }
-
-                        if(result[0][0].interfone === 'interfone') {
-                            $('#interfone').attr('checked', true);
-                        }
-
-                        if(result[0][0].ginastica === 'ginastica') {
-                            $('#ginastica').attr('checked', true);
-                        }
-
-                        if(result[0][0].quadra === 'quadra') {
-                            $('#quadra').attr('checked', true);
-                        }
-
-                        if(result[0][0].festas === 'festas') {
-                            $('#festas').attr('checked', true);
-                        }
-
-                        if(result[0][0].jogos === 'jogos') {
-                            $('#jogos').attr('checked', true);
-                        }
-
-                        if(result[0][0].churrasqueira === 'churrasqueira') {
-                            $('#churrasqueira').attr('checked', true);
-                        }
-
-                        if(result[0][0].playground === 'playground') {
-                            $('#playground').attr('checked', true);
-                        }
-
-                        if(result[0][0].piscina === 'piscina') {
-                            $('#piscina').attr('checked', true);
-                        }
-
-                        if(result[0][0].sauna === 'sauna') {
-                            $('#sauna').attr('checked', true);
-                        }
                         
                         if(result[1].length !== 0) {
                             $.each(result[1], function(index, value) {
@@ -1571,7 +1493,7 @@ $(() => {
                                 </div>`).appendTo('.formulario_processo');
 
                                 if(result.compradores_pf[a].cpf_conjuge) {
-                                    // CÔNJUGE VENDEDORES
+                                    // CÔNJUGE COMPRADOR
                                     $(`<div class="comprador_conjuge">
                                         <h1 class="text-center">Cônjuge Comprador</h1>
                                         <div class="row">
@@ -1628,6 +1550,16 @@ $(() => {
                                                 <input type="text" class="form-control" value="`+ result.compradores_pf[a].ass_cartorio_conjuge +`" readonly>
                                             </div>
                                         </div><!-- Row 6 -->
+                                        <div class="row">
+                                            <div class="form-group col-md-3">
+                                                <label for="telefone_conjuge" class="mb-0 col-form-label-sm">Telefone</label>
+                                                <input type="text" name="telefone_conjuge" id="telefone_conjuge" class="form-control pula" value="`+ result.compradores_pf[a].telefone_conjuge +`" readonly>
+                                            </div>
+                                            <div class="form-group col-md-9">
+                                                <label for="email_conjuge" class="mb-0 col-form-label-sm">E-mail</label>
+                                                <input type="text" name="email_conjuge" id="email_conjuge" class="form-control pula" value="`+ result.compradores[a].email_conjuge +`" readonly>
+                                            </div>
+                                        </div>
                                     </div><!-- Row 4 -->`).appendTo('.formulario_processo');
                                 }
 
@@ -1652,8 +1584,8 @@ $(() => {
                                         break;
                                 }
 
-                                // ENDEREÇO VENDEDOR
-                                $(`<div class="endereco_vendedor">
+                                // ENDEREÇO COMPRADOR
+                                $(`<div class="endereco_comprador">
                                     <h1 class="text-center mb-3">Endereço Comprador</h1>
                                     <div class="row">
                                         <div class="form-group col-md-6">
@@ -2381,6 +2313,16 @@ $(() => {
                                                 <input type="text" class="form-control" value="`+ result.vendedores_pf[a].ass_cartorio_conjuge +`" readonly>
                                             </div>
                                         </div><!-- Row 6 -->
+                                        <div class="row">
+                                            <div class="form-group col-md-3">
+                                                <label for="telefone_conjuge" class="mb-0 col-form-label-sm">Telefone</label>
+                                                <input type="text" name="telefone_conjuge" id="telefone_conjuge" class="form-control pula" value="`+ result.vendedores_pf[a].telefone_conjuge +`" readonly>
+                                            </div>
+                                            <div class="form-group col-md-9">
+                                                <label for="email_conjuge" class="mb-0 col-form-label-sm">E-mail</label>
+                                                <input type="text" name="email_conjuge" id="email_conjuge" class="form-control pula" value="`+ result.vendedores_pf[a].email_conjuge +`" readonly>
+                                            </div>
+                                        </div>
                                     </div><!-- Row 4 -->`).appendTo('.formulario_processo');
 
                                     switch (result.vendedores_pf[a].regime) {
