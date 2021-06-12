@@ -52,10 +52,10 @@
             $telefone_conjuge = filter_input(INPUT_POST, trim('telefone_conjuge'));
             $email_conjuge = filter_input(INPUT_POST, trim('email_conjuge'));
 
-            if($data_casamento === "") {
+            if(empty($data_casamento)) {
                 $data_casamento = '';
             }
-            if($d_expedicao_conjuge === '') {
+            if(empty($d_expedicao_conjuge)) {
                 $d_expedicao_conjuge = '';
             }
 
