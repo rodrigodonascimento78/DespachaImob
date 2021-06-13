@@ -4,4 +4,3 @@
     require '../src/routes.php';
     
     $router->run( $router->routes );
-?>

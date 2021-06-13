@@ -16,7 +16,7 @@
             $item_pesquisado = filter_input(INPUT_POST, trim('item_pesquisado'));
             $arquivos_form = $_FILES['arquivos'];
             
-            if($item_pesquisado !== "") {
+            if(!empty($item_pesquisado)) {
                 if($opcao === 'cliente' && strlen($item_pesquisado) === 11) {
                     if($this->docValido($arquivos_form)) {
                         $arquivos_form = $this->uploadFile($arquivos_form, $item_pesquisado);
@@ -68,4 +68,3 @@
             }
         }
     }
-?>

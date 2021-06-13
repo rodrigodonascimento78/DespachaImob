@@ -2,13 +2,15 @@
     <main>
         <h1 class="text-center">Cliente Pessoa Física</h1>
         <div class="container">
-            <?php
-                if(isset($mensagem)) {
-                    echo $divinit;
-                    echo $mensagem;
-                    echo $divfim;
-                }
-            ?>
+            <?php if(isset($mensagem) && $mensagem === 'sucesso') { ?>
+                <div class="alert alert-success text-center conteudo_mensagem">
+                    'Cadastro realizado com sucesso!'
+                </div>
+            <?php } else if(isset($mensagem) && $mensagem === 'error') { ?>
+                <div class="alert alert-danger text-center conteudo_mensagem">
+                    Cadastro não foi realizado, pois já existe na base de dados.
+                </div>
+            <?php } ?>
             <form method="POST" action="<?= $base; ?>novocliente" class="viacepForm pessoa_fisica">
 
                 <!-- DADOS PESSOAIS DO CLIENTE -->

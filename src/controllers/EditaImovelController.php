@@ -55,4 +55,3 @@
             $this->redirect('pesquisa');
         }
     }
-?>

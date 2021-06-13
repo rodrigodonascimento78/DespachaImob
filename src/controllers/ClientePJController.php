@@ -209,18 +209,13 @@ use \src\models\PJCliente;
                     ])->execute();
                     
                     $this->render('clientepj', [
-                        'divinit' => '<div class="alert alert-success text-center conteudo_mensagem">',
-                        'mensagem' => 'Cadastro realizado com sucesso!',
-                        'divfim' => '</div>',
+                        'mensagem' => 'sucesso',
                     ]);
                     exit;
                 }
             }
             $this->render('clientepj', [
-                'divinit' => '<div class="alert alert-danger text-center conteudo_mensagem">',
-                'mensagem' => 'Cadastro não foi realizado, pois já existe na base de dados',
-                'divfim' => '</div>',
+                'mensagem' => 'error',
             ]);
         }
     }
-?>

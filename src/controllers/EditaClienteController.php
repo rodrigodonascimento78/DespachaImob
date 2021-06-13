@@ -142,7 +142,7 @@
             $celular_socio_4 = filter_input(INPUT_POST, trim('celular_socio_4'));
             $email_socio_4 = filter_input(INPUT_POST, trim('email_socio_4'));
 
-            if(isset($cpf)) {
+            if(isset($cpf) && !empty($cpf)) {
                 Cliente::update()
                 ->set([
                     'nome' => $nome,
@@ -188,7 +188,7 @@
 
                 $this->redirect('pesquisa');
             }
-            if(isset($cnpj)) {
+            if(isset($cnpj) && empty($cnpj)) {
                 PJCliente::update()
                 ->set([
                     'razao_social' => $razao_social,
@@ -290,4 +290,3 @@
 
         }
     }
-?>

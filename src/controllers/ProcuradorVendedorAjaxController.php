@@ -115,4 +115,3 @@ class ProcuradorVendedorAjaxController extends Controller
             }
         }
     }
-?>

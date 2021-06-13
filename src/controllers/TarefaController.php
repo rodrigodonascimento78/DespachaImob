@@ -68,4 +68,3 @@
             $this->redirect('home');
         }
     }
-?>

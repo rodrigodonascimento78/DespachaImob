@@ -24,4 +24,3 @@
             $this->redirect('pesquisa');
         }
     }
-?>

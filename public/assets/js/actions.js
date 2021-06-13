@@ -10,6 +10,7 @@ $(() => {
                     "opacity": "0",
                 }, 2000, function() {
                     $(".conteudo_mensagem").hide();
+                    window.location.href = 'http://despachaimob.com/novocliente';
                 });
             }, 6000);
         }

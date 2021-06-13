@@ -991,4 +991,3 @@ class EspelhoController extends Controller
             // essa parte acima sever para abrir a janela de download do pdf
         }
     }
-?>

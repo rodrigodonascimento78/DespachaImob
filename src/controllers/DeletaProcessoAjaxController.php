@@ -22,4 +22,3 @@
             Vendedores_Procuradore::delete()->where('num_processo_proc_vendedor', intval($processo_numero))->execute();
         }
     }
-?>

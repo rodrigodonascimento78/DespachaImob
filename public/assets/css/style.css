@@ -48,6 +48,11 @@ nav .nav a:hover {
   background-color: #D3F5F4 !important;
   color: #2E4773 !important;
 }
+
+.nav-item > a {
+  line-height: 4rem;
+}
+
 nav .dropdown-menu {
   background-color: #47749C !important;
   color: #D3F5F4 !important;

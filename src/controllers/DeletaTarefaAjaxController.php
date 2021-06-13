@@ -12,4 +12,3 @@
             Tarefa::delete()->where('id', $id)->execute();
         }
     }
-?>

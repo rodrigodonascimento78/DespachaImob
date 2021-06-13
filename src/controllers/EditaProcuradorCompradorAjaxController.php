@@ -18,8 +18,11 @@
             $cpf_proc_comprador = filter_input(INPUT_POST, trim('cpf_proc_comprador'));
 
             $comprador = Compradore::select()->where('cpf_cnpj_comprador', $cpf_proc_comprador)->where('num_processo_comprador', intval($numero_processo))->execute();
+
             $procurador_comprador = Compradores_Procuradore::select()->where('cpf_cnpj_proc_comprador', $cpf_proc_comprador)->where('num_processo_proc_comprador', intval($numero_processo))->execute();
+
             $vendedor = Vendedore::select()->where('cpf_cnpj_vendedor', $cpf_proc_comprador)->where('num_processo_vendedor', intval($numero_processo))->execute();
+            
             $procurador_vendedor = Vendedores_Procuradore::select()->where('cpf_cnpj_proc_vendedor', $cpf_proc_comprador)->where('num_processo_proc_vendedor', intval($numero_processo))->execute();
 
             if(strlen($cpf_proc_comprador) === 11) {
@@ -63,4 +66,3 @@
             
         }
     }
-?>

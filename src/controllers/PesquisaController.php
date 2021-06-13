@@ -10,4 +10,3 @@
             $this->render('pesquisa', ['cpf' => $cpf]);
         }
     }
-?>
